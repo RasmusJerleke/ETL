@@ -10,11 +10,6 @@ def read_json():
         data = json.load(f)
     return [x for x in data.items()], data.keys()
 
-# tup, keys = read_json()
-# print(tup, keys)
-
-
-
 # write another function that takes as inputs a list of tuples, a list of strings, and a filepath. 
 # The function should write the list as a JSON object to file.
 def write_to_file(tuple_list, strings, filepath=globals.HARMONIZED_DATA_PATH):

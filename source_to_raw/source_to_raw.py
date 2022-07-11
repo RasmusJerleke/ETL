@@ -9,8 +9,15 @@ def get_request(url:str) -> dict:
         return None
 
 def create_json_file(dict, path):
-    if dict == None:
-        return False
     with open(path, 'w') as f:
         json.dump(dict, f, indent=4)
     return True
+
+def run(url, path = 'data/test/raw/data.json'):
+    dict = get_request(url)
+    if dict == None:
+        return False
+    return create_json_file (dict, path)
+
+
+

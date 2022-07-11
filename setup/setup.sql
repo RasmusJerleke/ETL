@@ -1,0 +1,12 @@
+DROP SCHEMA IF EXISTS modelled;
+DROP SCHEMA IF EXISTS staged;
+DROP SCHEMA IF EXISTS cleansed;
+DROP DATABASE IF EXISTS databasename; 
+
+CREATE DATABASE archprep;
+-- GRANT ALL PRIVILEGES ON DATABASE archprep to <usr>
+-- ALTER DATABASE archprep OWNER TO <usr>;
+\c archprep
+CREATE SCHEMA cleansed;
+CREATE SCHEMA staged;
+CREATE SCHEMA modelled;
